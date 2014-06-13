@@ -25,7 +25,13 @@ module.exports = function (grunt) {
     this.files.forEach(function (file) {
 
       var src = file.src
-        .map(function (filepath) {
+        .filter(function (filepath) {
+          if (filepath !== file.dest) {
+            return true;
+          } else {
+            return false;
+          }
+        }).map(function (filepath) {
           return filePathParser(filepath, options);
         }).map(function (file) {
           return grunt.template.process(componentTpl, { data: file });
