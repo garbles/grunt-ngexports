@@ -1,0 +1,33 @@
+{
+  "name": "grunt-ngexports",
+  "version": "0.1.0",
+  "description": "Generates nodified-AngularJS files for your browserified-ready application",
+  "repository": "https://github.com/garbles/grunt-ngexports",
+  "author": {
+    "name": "Gabe Scholz",
+    "email": "info@garbl.es",
+    "url": "www.garbl.es"
+  },
+  "keywords": [
+    "grunt",
+    "browserify",
+    "angular"
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-nodeunit": "~0.3.0",
+    "grunt": "~0.4.2",
+    "jshint-stylish": "~0.1.5",
+    "load-grunt-tasks": "~0.3.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}
