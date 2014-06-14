@@ -8,12 +8,12 @@
 
 'use strict';
 
-var filePathParser = require('../lib/filePathParser');
+var filePathParser = require('./lib/filePathParser');
 
 module.exports = function (grunt) {
-  var componentTpl = grunt.file.read(__dirname + '/../templates/component.js'),
-    prefix = grunt.file.read(__dirname + '/../templates/prefix.js'),
-    suffix = grunt.file.read(__dirname + '/../templates/suffix.js');
+  var componentTpl = grunt.file.read(__dirname + '/templates/component.js'),
+    prefix = grunt.file.read(__dirname + '/templates/prefix.js'),
+    suffix = grunt.file.read(__dirname + '/templates/suffix.js');
 
   grunt.registerMultiTask('ngExports',
   'Generates nodified-AngularJS files for your browserified-ready application',
@@ -23,7 +23,6 @@ module.exports = function (grunt) {
     });
 
     this.files.forEach(function (file) {
-
       var src = file.src
         .filter(function (filepath) {
           if (filepath !== file.dest) {
