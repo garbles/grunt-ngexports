@@ -1,4 +1,8 @@
-module.exports = function (str) {
+module.exports = function (str, options) {
+  if (options.customFolders && options.customFolders[str]) {
+    return options.customFolders[str];
+  }
+
   switch (str) {
     case 'factories':
       return 'factory';

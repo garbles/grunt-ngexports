@@ -18,7 +18,10 @@ module.exports = function (grunt) {
     ngExports: {
       dist: {
         options: {
-          cwd: 'test/ouput'
+          cwd: 'test/ouput',
+          customFolders: {
+            models: 'factory'
+          }
         },
         files: {
           'test/output/ngExports.js': ['test/fixtures/**/*.js']
